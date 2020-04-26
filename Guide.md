@@ -2,14 +2,11 @@
 # Open terminal and remove any previous #
 # NVIDIA installations                 #
 
-
 sudo rm /etc/apt/sources.list.d/cuda*
 sudo apt remove --autoremove nvidia-cuda-toolkit
 sudo apt remove --autoremove nvidia-*
 
-
 # set up the CUDA PPA                  #
-
 
 sudo apt update
 sudo add-apt-repository ppa:graphics-drivers/ppa
@@ -20,23 +17,18 @@ sudo bash -c 'echo "deb http://developer.download.nvidia.com/compute/cuda/repos/
 
 sudo bash -c 'echo "deb http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64 /" > /etc/apt/sources.list.d/cuda_learn.list'
 
-
 # Install CUDA 10.1 packages           #
-
 
 sudo apt update
 sudo apt install cuda-10-1
 sudo apt install libcudnn7
 
-
 # Add CUDA to .profile path            #
 
 sudo nano ~/.profile
 
-
 # Insert the following to the end of   #
 # the file and save it                 #
-
 
 # set PATH for cuda 10.1 installation
 if [ -d "/usr/local/cuda-10.1/bin/" ]; then
@@ -44,10 +36,8 @@ if [ -d "/usr/local/cuda-10.1/bin/" ]; then
     export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 fi
 
-
 # Reboot your machine and check for    #
 # the installation                     #
-
 
 sudo reboot
 

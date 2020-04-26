@@ -1,4 +1,4 @@
-#### This is a quick guide to install CUDA 10.1 onto Ubuntu 18.04 from terminal####
+#### This is a quick guide to install CUDA 10.1 onto Ubuntu 18.04 from terminal ####
 **Prerequisite**
 * Ubuntu 18.04
 * Any CUDA enabled NVIDIA GPU
